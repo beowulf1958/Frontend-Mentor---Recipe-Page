@@ -1,0 +1,125 @@
+  @font-face {
+        font-family: "Outfit";
+        src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+        font-weight: 400 700;
+        font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  }
+  :root {
+        --green: hsl(75, 94%, 57%);
+        --pink: hsl(324, 84%, 60%);
+
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+  }
+
+/* composition */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--eggshell);
+    color: var(--wenge-brown);
+    font-family: "Outfit", sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+  }
+  .card {
+		max-width: 90%;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+  }
+
+/* header styles */
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+	h1 {
+    color: var(--dark-charcoal);
+  }
+	h1, h2 {
+		font-family: "Young Serif", serif;  
+	}
+	.dark {
+		font-weight: 700;
+		color: hsl(24, 5%, 18%); 
+	}
+	  
+/* main styles */
+  h2, ::marker {
+		font-weight: 700;
+    color: var(--nutmeg);
+  }
+  .Preparation {
+    background-color: var(--rose-white);
+    padding: 10px;
+  }
+  .raspberry {
+    color: var(--dark-raspberry);
+  }
+	ul, ol {
+	  list-style-position: inside;
+	}
+	  
+/* table styles */
+  .Nutrition table {
+    border-collapse: collapse;
+    width: 100%;
+    tr {
+      border-bottom: 1px solid var(--light-grey);
+    }
+    tr:last-child {
+      border: none;
+    }
+    td {
+      padding-left: 10px;
+    }
+  }
+
+  .stat {
+		font-weight: 700;
+    color: var(--nutmeg);
+  }
+
+/* footer syles */
+  .attribution {
+    font-size: 14px;
+    text-align: center;
+  }
+  .attribution a {
+    text-decoration: none;
+    color: hsl(332, 51%, 32%);
+  }
+  .attribution a:hover {
+    color: hsl(330, 2%, 80%);
+  }
+
+/* desktop styles */
+  @media only screen and (min-width: 480px) {
+		.card {
+			max-width: 30rem;
+		}
+		.card, .Preparation, .Ingredients, .Instructions {
+			padding: 20px;
+		}
+		header, img, .Preparation, .Ingredients, .Instructions, hr, h2, li, .Nutrition p {
+			margin-bottom: 10px;
+		}
+
+  }
